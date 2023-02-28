@@ -1,3 +1,3 @@
-# C++-Dice-Roller
+C++ Dice Roller
 
 I made this.
