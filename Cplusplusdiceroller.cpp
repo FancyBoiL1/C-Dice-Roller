@@ -1,36 +1,34 @@
 #include <iostream>
-#include <cstdlib>
-using namespace std;
+#include <ctime>
 
-int rand();
-
-int roll(int sides, int amount, int mod){
-    int i;
-    int x;
-    x = rand()%(sides + 1);
-    for(i = 1; i < amount; ++i){
-        x = (x + rand()%(sides + 1));
+int roll(int x, int y, int z){
+    /* X = sides
+       Y = roll times
+       Z = modifier
+    */
+    srand(time(NULL));
+    int end = 0;
+    for(int i =0;i < y;i++){
+        end += (rand() % x) + 1
     }
-    x = (x + mod);
-    return x;
+    
+    return end;
 }
 
 int main(){
     int sidz;
     int amm;
     int mod;
-    int bl = 0;
     
-    for (bl = 0;bl < 1000; ++bl){
-        cout << "How many sides does your dice have? " << endl;
-        cin >> sidz;
-        cout << "How many dice? " << endl;
-        cin >> amm;
-        cout << "What number should I add to the roll after it is all rolled? " << endl;
-        cin >> mod;
-        int b = roll(sidz,amm,mod);
-    
-        cout << b <<endl<<endl;
+    while(1 == 1){
+        std::cout << "How many sides does your dice have?: ";
+        std::cin >> sidz;
+        std::cout << "How many dice? ";
+        std::cin >> amm;
+        std::cout << "What number should I add to the roll after it is all rolled? ";
+        std::cin >> mod;
+        
+        std::cout << roll(sidz,amm,mod) << std::endl << std::endl;
     }
 }
 
