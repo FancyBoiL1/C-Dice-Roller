@@ -12,7 +12,7 @@ int roll(int x, int y, int z){
         end += (rand() % x) + 1
     }
     
-    return end;
+    return (end + z);
 }
 
 int main(){
