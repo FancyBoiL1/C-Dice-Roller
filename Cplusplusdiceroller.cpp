@@ -9,7 +9,7 @@ int roll(int x, int y, int z){
     srand(time(NULL));
     int end = 0;
     for(int i =0;i < y;i++){
-        end += (rand() % x) + 1
+        end += (rand() % x) + 1;
     }
     
     return (end + z);
@@ -31,4 +31,3 @@ int main(){
         std::cout << roll(sidz,amm,mod) << std::endl << std::endl;
     }
 }
-
